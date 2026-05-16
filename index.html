@@ -286,6 +286,7 @@
     .reveal{opacity:1;transform:none;transition:none}
   }
 </style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -540,16 +541,20 @@
     if(row) row.classList.add('today');
   }catch(e){}
 
-  // --- Scroll reveal ---
+  // --- Scroll reveal (with no-scroll / print safety net) ---
   var els = document.querySelectorAll('.reveal');
+  function revealAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
   if('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(ents){
-      ents.forEach(function(en,i){
+      ents.forEach(function(en){
         if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
       });
     },{rootMargin:'0px 0px -8% 0px',threshold:.12});
     els.forEach(function(el,i){ el.style.transitionDelay = (i%3*70)+'ms'; io.observe(el); });
-  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+    // Never leave content hidden: if the visitor hasn't scrolled, show it anyway.
+    setTimeout(revealAll, 1800);
+  } else { revealAll(); }
+  window.addEventListener('beforeprint', revealAll);
 })();
 </script>
 </body>
