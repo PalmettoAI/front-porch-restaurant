@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Front Porch Restaurant &amp; Pie Shop — Home Cooking in Dunnellon, FL</title>
+<meta name="description" content="Family-run Southern home cooking & famous homemade pies in Dunnellon, FL since 1986. Fried chicken, pot roast, peach pie. Open Tue–Sun. Put a little South in your mouth." />
+<meta name="theme-color" content="#1C4E8A" />
+<link rel="canonical" href="https://palmettoai.github.io/front-porch-restaurant/" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="restaurant.restaurant" />
+<meta property="og:title" content="Front Porch Restaurant & Pie Shop — Dunnellon, FL" />
+<meta property="og:description" content="Southern home cooking & famous homemade pies since 1986. Put a little South in your mouth." />
+<meta property="og:image" content="https://palmettoai.github.io/front-porch-restaurant/assets/og.jpg" />
+<meta property="og:url" content="https://palmettoai.github.io/front-porch-restaurant/" />
+<meta property="og:site_name" content="Front Porch Restaurant & Pie Shop" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Front Porch Restaurant & Pie Shop — Dunnellon, FL" />
+<meta name="twitter:description" content="Southern home cooking & famous homemade pies since 1986." />
+<meta name="twitter:image" content="https://palmettoai.github.io/front-porch-restaurant/assets/og.jpg" />
+
+<link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&family=Bitter:ital,wght@0,400;0,600;0,800;1,400&family=Caveat:wght@600;700&display=swap" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231C4E8A'/%3E%3Ctext x='32' y='44' font-size='38' text-anchor='middle' fill='%23C7D24A' font-family='Georgia,serif' font-weight='bold'%3EFP%3C/text%3E%3C/svg%3E" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Front Porch Restaurant & Pie Shop",
+  "image": "https://palmettoai.github.io/front-porch-restaurant/assets/og.jpg",
+  "url": "https://palmettoai.github.io/front-porch-restaurant/",
+  "telephone": "+1-352-489-4708",
+  "priceRange": "$10–20",
+  "servesCuisine": ["American", "Southern", "Comfort Food", "Breakfast", "Pie"],
+  "description": "Family-run Southern home cooking and famous homemade pies in Dunnellon, Florida since 1986.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12039 N Florida Ave",
+    "addressLocality": "Dunnellon",
+    "addressRegion": "FL",
+    "postalCode": "34434",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 29.0205, "longitude": -82.4337 },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Front+Porch+Restaurant+12039+N+Florida+Ave+Dunnellon+FL+34434",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "3478", "bestRating": "5" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "07:00", "closes": "20:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "07:00", "closes": "20:00" }
+  ],
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Outdoor seating", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Live music", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kids' menu", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Takeout", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Catering", "value": true }
+  ],
+  "acceptsReservations": "False"
+}
+</script>
+<style>
+  :root{
+    --paper:#F3E7CE; --paper-2:#EADCBC; --card:#FBF3DF;
+    --ink:#251A10; --ink-soft:#5C4A33;
+    --blue:#1C4E8A; --blue-deep:#123A66;
+    --lime:#C7D24A; --lime-bright:#DDE864;
+    --barn:#9E3526; --barn-deep:#7C2619;
+    --wood:#6B5640;
+    --line:rgba(37,26,16,.18);
+    --xs:.5rem; --sm:.85rem; --md:1.4rem; --lg:2.4rem; --xl:4rem; --xxl:6.5rem;
+    --maxw:1180px;
+    --shadow-sm:0 1px 2px rgba(37,26,16,.12), 0 2px 6px rgba(37,26,16,.08);
+    --shadow-md:0 4px 10px rgba(37,26,16,.16), 0 10px 30px rgba(37,26,16,.14);
+    --shadow-lg:0 10px 24px rgba(37,26,16,.22), 0 28px 60px rgba(37,26,16,.20);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:"Bitter",Georgia,serif;color:var(--ink);background:var(--paper);
+    line-height:1.62;font-size:clamp(1rem,.55vw + .92rem,1.12rem);overflow-x:hidden;
+  }
+  /* paper grain */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:var(--barn);text-underline-offset:3px}
+  h1,h2,h3{line-height:1.05;font-weight:400}
+  .rye{font-family:"Rye",Georgia,serif}
+  .script{font-family:"Caveat",cursive}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1.1rem,4vw,2.4rem)}
+  .eyebrow{font-family:"Caveat",cursive;font-size:clamp(1.4rem,3.5vw,2rem);color:var(--barn);font-weight:700;line-height:1}
+  .skip{position:absolute;left:-999px;top:0;background:var(--blue);color:#fff;padding:.7rem 1.1rem;z-index:200;border-radius:0 0 8px 0}
+  .skip:focus{left:0}
+  :focus-visible{outline:3px solid var(--barn);outline-offset:3px;border-radius:3px}
+
+  /* ---------- Painted sign component ---------- */
+  .sign{
+    display:inline-block;background:var(--blue);color:var(--lime-bright);
+    font-family:"Rye",Georgia,serif;text-align:center;
+    padding:.55em .95em;border-radius:7px;
+    box-shadow:inset 0 0 0 3px var(--paper), inset 0 0 0 6px var(--blue), var(--shadow-md);
+    text-shadow:0 2px 0 var(--blue-deep), 0 3px 4px rgba(0,0,0,.35);
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;background:var(--blue-deep);color:#f6efdc;
+    display:flex;gap:1rem;justify-content:space-between;align-items:center;
+    padding:.5rem clamp(1.1rem,4vw,2.4rem);font-size:.92rem;
+    border-bottom:3px solid var(--lime);
+  }
+  .topbar a{color:var(--lime-bright);font-weight:600;text-decoration:none}
+  .topbar .status{display:flex;align-items:center;gap:.5rem;font-family:"Bitter"}
+  .dot{width:10px;height:10px;border-radius:50%;background:#7CCB6B;box-shadow:0 0 0 3px rgba(124,203,107,.3);flex:none}
+  .dot.shut{background:#E0a13a;box-shadow:0 0 0 3px rgba(224,161,58,.3)}
+  .topbar .call{background:var(--lime);color:var(--blue-deep);padding:.42rem .9rem;border-radius:999px;white-space:nowrap}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:clamp(560px,92vh,860px);display:grid;align-items:end;isolation:isolate;color:#fdf6e3}
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:
+      linear-gradient(180deg,rgba(18,40,68,.30) 0%,rgba(18,40,68,.18) 38%,rgba(18,30,40,.62) 78%,rgba(15,22,30,.86) 100%),
+      url("assets/hero.jpg") center 28%/cover no-repeat;
+  }
+  .hero-inner{padding-block:clamp(2rem,7vw,4.5rem) clamp(2.6rem,8vw,5rem);display:grid;gap:1.1rem;max-width:var(--maxw);margin-inline:auto;width:100%}
+  .hero .since{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--lime-bright);transform:rotate(-2deg);width:max-content}
+  .hero h1{font-family:"Rye",Georgia,serif;font-size:clamp(2.9rem,11vw,7.4rem);letter-spacing:.5px;
+    text-shadow:0 3px 0 rgba(0,0,0,.35),0 6px 22px rgba(0,0,0,.45);margin-block:-.1rem}
+  .hero h1 .amp{display:block;font-size:.42em;color:var(--lime-bright);letter-spacing:2px;margin-top:.15em}
+  .hero .tag{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(1.6rem,5vw,3rem);color:#fdf6e3;transform:rotate(-1.5deg);width:max-content}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;align-items:center;font-size:1rem;margin-top:.2rem}
+  .stars{color:var(--lime-bright);letter-spacing:2px;font-size:1.15rem}
+  .hero .meta b{font-family:"Bitter"}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
+  .btn{
+    font-family:"Bitter";font-weight:800;font-size:1.02rem;text-decoration:none;border:0;cursor:pointer;
+    padding:.95rem 1.7rem;border-radius:999px;display:inline-flex;align-items:center;gap:.55rem;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .2s;
+    min-height:48px;
+  }
+  .btn-primary{background:var(--lime);color:var(--blue-deep);box-shadow:var(--shadow-md)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  .btn-ghost{background:rgba(253,246,227,.12);color:#fdf6e3;border:2px solid rgba(253,246,227,.55);backdrop-filter:blur(2px)}
+  .btn-ghost:hover{background:rgba(253,246,227,.22);transform:translateY(-3px)}
+
+  /* ---------- Section scaffolding ---------- */
+  section{position:relative;z-index:2}
+  .band{padding-block:clamp(3.2rem,9vw,6.5rem)}
+  .head{display:grid;gap:.4rem;margin-bottom:clamp(1.6rem,4vw,2.6rem)}
+  .head h2{font-family:"Rye",Georgia,serif;font-size:clamp(2rem,6.2vw,3.6rem);color:var(--blue-deep)}
+  .plank{
+    background:
+      repeating-linear-gradient(180deg,transparent 0 38px,rgba(107,86,64,.10) 38px 40px),
+      linear-gradient(180deg,var(--paper-2),var(--paper));
+  }
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Story ---------- */
+  .story-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.6rem,5vw,4rem);align-items:center}
+  .story-copy p{margin-top:1rem;color:var(--ink-soft);font-size:1.08rem}
+  .story-copy .lead{font-size:clamp(1.2rem,2.4vw,1.5rem);color:var(--ink);font-weight:600;line-height:1.4}
+  .frame{position:relative}
+  .frame img{border-radius:6px;box-shadow:var(--shadow-lg);border:6px solid #fff;outline:1px solid var(--line);aspect-ratio:11/9;object-fit:cover}
+  .frame .tape{position:absolute;top:-16px;left:50%;width:120px;height:34px;transform:translateX(-50%) rotate(-3deg);
+    background:rgba(199,210,74,.55);box-shadow:0 1px 3px rgba(0,0,0,.15);border-radius:2px}
+  .est{position:absolute;right:-14px;bottom:-22px;background:var(--barn);color:#fdf6e3;font-family:"Rye";
+    width:104px;height:104px;border-radius:50%;display:grid;place-content:center;text-align:center;line-height:1.05;
+    font-size:.95rem;box-shadow:var(--shadow-md);border:3px solid var(--paper);transform:rotate(8deg)}
+  .est b{font-size:1.5rem;display:block}
+
+  /* ---------- Plate feature ---------- */
+  .plate{background:var(--blue-deep);color:#f4ead2}
+  .plate .plate-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(1.6rem,5vw,4rem);align-items:center}
+  .plate img{border-radius:8px;box-shadow:var(--shadow-lg);aspect-ratio:4/5;object-fit:cover}
+  .plate h2{font-family:"Rye";color:var(--lime-bright);font-size:clamp(2rem,6vw,3.4rem)}
+  .plate .eyebrow{color:var(--lime)}
+  .plate p{color:#e7dcc3;margin-top:1rem;font-size:1.08rem}
+  .tags{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.5rem;list-style:none}
+  .tags li{background:rgba(199,210,74,.16);border:1px solid rgba(199,210,74,.45);color:#eef2cf;
+    padding:.42rem .9rem;border-radius:999px;font-size:.92rem;font-weight:600}
+
+  /* ---------- Pie feature ---------- */
+  .pie{background:linear-gradient(160deg,var(--barn),var(--barn-deep));color:#f7e9d8;overflow:hidden}
+  .pie-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.6rem,5vw,4rem);align-items:center}
+  .pie h2{font-family:"Rye";font-size:clamp(2.2rem,7vw,4rem);color:#fdf6e3}
+  .pie .eyebrow{color:var(--lime-bright)}
+  .pie p{margin-top:1rem;color:#f0ddc8;font-size:1.1rem}
+  .pielist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.55rem 1.4rem;margin-top:1.6rem;font-family:"Caveat";font-weight:700;font-size:1.4rem}
+  .pielist li{display:flex;gap:.55rem;align-items:baseline}
+  .pielist li::before{content:"✦";color:var(--lime-bright);font-family:"Bitter";font-size:.85rem}
+  .pie img{border-radius:10px;box-shadow:var(--shadow-lg);aspect-ratio:3/4;object-fit:cover;transform:rotate(2deg)}
+
+  /* ---------- 1986 manifesto band ---------- */
+  .manifesto{position:relative;min-height:clamp(420px,64vh,620px);display:grid;place-items:center;text-align:center;color:#fdf6e3;isolation:isolate;padding:3rem 1.2rem}
+  .manifesto::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(rgba(15,20,16,.62),rgba(15,20,16,.72)),url("assets/chalkboard.jpg") center/cover no-repeat}
+  .manifesto .script{font-size:clamp(2rem,7vw,4.4rem);color:var(--lime-bright);line-height:1.15;max-width:14ch;font-weight:700;rotate:-1.5deg}
+  .manifesto p{margin-top:1.4rem;font-size:1.05rem;color:#e6dcc7;max-width:46ch;margin-inline:auto}
+  .manifesto .credit{font-size:.85rem;margin-top:1.2rem;color:#bcb39c;letter-spacing:.5px}
+
+  /* ---------- Menu ---------- */
+  .menu-board{background:var(--blue-deep);border-radius:14px;padding:clamp(1.6rem,4vw,3rem);box-shadow:var(--shadow-lg);
+    border:5px solid #2c2014;color:#f3ead4;position:relative}
+  .menu-board::before{content:"";position:absolute;inset:10px;border:1px dashed rgba(243,234,212,.28);border-radius:8px;pointer-events:none}
+  .menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,3rem) clamp(2rem,6vw,5rem)}
+  .menu-cat{font-family:"Rye";color:var(--lime-bright);font-size:1.35rem;margin:1.6rem 0 .7rem;border-bottom:2px dotted rgba(199,210,74,.4);padding-bottom:.35rem}
+  .menu-cat:first-child{margin-top:0}
+  .mi{display:flex;justify-content:space-between;gap:.8rem;padding:.42rem 0;border-bottom:1px dotted rgba(243,234,212,.18)}
+  .mi .nm{font-weight:600}
+  .mi .ds{display:block;font-size:.86rem;color:#c8bd9f;font-weight:400;font-family:"Bitter"}
+  .mi .pr{font-family:"Rye";color:var(--lime-bright);white-space:nowrap}
+  .menu-note{text-align:center;margin-top:1.8rem;font-family:"Caveat";font-weight:700;font-size:1.45rem;color:var(--lime-bright)}
+
+  /* ---------- Reviews ---------- */
+  .reviews{background:var(--paper-2)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.1rem,3vw,2rem)}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.6rem 1.5rem;box-shadow:var(--shadow-sm);
+    position:relative;rotate:-1deg}
+  .rev:nth-child(2){rotate:1.2deg}
+  .rev:nth-child(3){rotate:-.5deg}
+  .rev .pin{position:absolute;top:-9px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;
+    background:var(--barn);box-shadow:0 2px 4px rgba(0,0,0,.3),inset 0 -2px 3px rgba(0,0,0,.3)}
+  .rev .qstars{color:#D9A33A;letter-spacing:2px;font-size:1rem}
+  .rev p{margin-top:.7rem;font-style:italic;color:var(--ink-soft);font-size:1rem}
+  .rev .who{margin-top:1rem;font-weight:800;font-family:"Bitter";font-size:.95rem;color:var(--ink)}
+  .rev .who span{display:block;font-weight:400;font-style:normal;color:var(--ink-soft);font-size:.82rem}
+
+  /* ---------- Visit ---------- */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,5vw,4rem)}
+  .visit h2{font-family:"Rye";font-size:clamp(2rem,6vw,3.4rem);color:var(--blue-deep)}
+  .info-row{display:flex;gap:.9rem;padding:1rem 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .info-row .ic{flex:none;width:42px;height:42px;border-radius:50%;background:var(--blue);color:var(--lime-bright);
+    display:grid;place-content:center;font-family:"Rye";font-size:1rem}
+  .info-row a{color:var(--barn);font-weight:700;text-decoration:none}
+  .info-row a:hover{text-decoration:underline}
+  .hours{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .hours caption{font-family:"Rye";color:var(--blue-deep);text-align:left;font-size:1.5rem;margin-bottom:.7rem;caption-side:top}
+  .hours th,.hours td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.98rem}
+  .hours th{font-weight:800;font-family:"Bitter"}
+  .hours tr:last-child td,.hours tr:last-child th{border-bottom:0}
+  .hours tr.today{background:rgba(199,210,74,.28)}
+  .hours tr.today th::after{content:" • Today";color:var(--barn);font-weight:800;font-size:.78rem}
+  .hours .closed{color:var(--barn);font-weight:700}
+  .feat{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem;list-style:none}
+  .feat li{background:var(--card);border:1px solid var(--line);padding:.4rem .85rem;border-radius:999px;font-size:.9rem;font-weight:600;color:var(--ink-soft)}
+  .visit .cta-row{margin-top:1.6rem}
+  .btn-blue{background:var(--blue);color:#fdf6e3;box-shadow:var(--shadow-md)}
+  .btn-blue:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);background:var(--blue-deep)}
+  .btn-barn{background:var(--barn);color:#fdf6e3;box-shadow:var(--shadow-md)}
+  .btn-barn:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--blue-deep);color:#d8cfb6;padding:clamp(2.4rem,6vw,4rem) 0 2.4rem;text-align:center}
+  footer .sign{margin-bottom:1.4rem;font-size:clamp(1.3rem,4vw,2rem)}
+  footer .nap{font-size:1rem;line-height:1.9}
+  footer a{color:var(--lime-bright);text-decoration:none}
+  footer .demo{margin-top:2rem;padding-top:1.6rem;border-top:1px solid rgba(216,207,182,.22);font-size:.82rem;color:#9c947d;max-width:52ch;margin-inline:auto;line-height:1.6}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:860px){
+    .story-grid,.plate .plate-grid,.pie-grid,.visit-grid,.menu-cols{grid-template-columns:1fr}
+    .plate .plate-grid{direction:ltr}
+    .plate img,.pie img{max-width:480px;margin-inline:auto}
+    .rev-grid{grid-template-columns:1fr}
+    .frame{max-width:520px;margin-inline:auto}
+    .est{width:88px;height:88px;font-size:.82rem}
+    .est b{font-size:1.25rem}
+  }
+  @media (max-width:520px){
+    .pielist{grid-template-columns:1fr}
+    .topbar{font-size:.82rem;flex-wrap:wrap;gap:.5rem}
+    .topbar .hide-sm{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="status" id="status" aria-live="polite">
+    <span class="dot" id="statusDot"></span><span id="statusText">Open today · 7:00 AM – 8:30 PM</span>
+  </div>
+  <div>
+    <span class="hide-sm" style="opacity:.85;margin-right:1rem">12039 N Florida Ave, Dunnellon FL</span>
+    <a class="call" href="tel:+13524894708">📞 (352) 489-4708</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-inner wrap">
+    <span class="since">A taste of home cookin' since 1986</span>
+    <h1 class="rye">Front Porch<span class="amp">RESTAURANT &amp; PIE SHOP</span></h1>
+    <span class="tag">“Put a little South in your mouth.”</span>
+    <div class="meta">
+      <span><span class="stars" aria-hidden="true">★★★★½</span> <b>4.4</b> on 3,400+ Google reviews</span>
+      <span aria-hidden="true">·</span>
+      <span>Dunnellon, Florida</span>
+      <span aria-hidden="true">·</span>
+      <span>Family-run &amp; proud of it</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#menu">See the Menu</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Front+Porch+Restaurant+12039+N+Florida+Ave+Dunnellon+FL+34434" target="_blank" rel="noopener">Get Directions ↗</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="band plank" aria-labelledby="story-h">
+    <div class="wrap story-grid">
+      <div class="story-copy reveal">
+        <p class="eyebrow">Our porch, your table</p>
+        <h2 id="story-h" class="rye" style="font-size:clamp(2rem,6vw,3.4rem);color:var(--blue-deep);margin:.3rem 0 .2rem">Three generations.<br>One little kitchen.</h2>
+        <p class="lead">Tucked along N Florida Ave in Dunnellon, the Front Porch has been serving honest Southern home cooking since 1986 — the kind of place where the tomatoes taste like your grandfather grew them and the pie comes home with you.</p>
+        <p>It's locally owned and run by three generations of one loving family. Chef Mike still hunts down real vegetables and real ingredients, every plate comes out on real plates, and yes — only a straw if you ask. Quaint, cozy, and unapologetically homemade.</p>
+      </div>
+      <div class="frame reveal">
+        <span class="tape" aria-hidden="true"></span>
+        <img src="assets/dining.jpg" width="1100" height="900" loading="lazy" decoding="async"
+             alt="The cozy, weathered-wood dining room at Front Porch Restaurant, with a sign reading 'operated since 1986'." />
+        <span class="est" aria-hidden="true">EST.<b>1986</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band plate" aria-labelledby="plate-h">
+    <div class="wrap plate-grid">
+      <div class="reveal">
+        <img src="assets/plate.jpg" width="712" height="950" loading="lazy" decoding="async"
+             alt="A heaping basket of golden Southern fried chicken with mashed potatoes and gravy, collard greens, and cornbread." />
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Hungry yet?</p>
+        <h2 id="plate-h">Southern plates,<br>made from scratch.</h2>
+        <p>Hand-breaded fried chicken. Slow Southern-style pot roast so tender it falls apart. Chicken &amp; dumplings, homemade soups, field peas, sweet potato, slaw, and Cuban bread on the side. Generous portions, fair prices, no shortcuts.</p>
+        <ul class="tags">
+          <li>Famous Fried Chicken</li>
+          <li>Southern Pot Roast</li>
+          <li>Chicken &amp; Dumplings</li>
+          <li>Homemade Soups</li>
+          <li>Big Country Breakfast</li>
+          <li>Fresh Veggie Plates</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band pie" aria-labelledby="pie-h">
+    <div class="wrap pie-grid">
+      <div class="reveal">
+        <p class="eyebrow">It's in the name</p>
+        <h2 id="pie-h">We're not just a restaurant.<br>We're a pie shop.</h2>
+        <p>Real chunky fruit, short-crust pastry, none of that purified sugary jelly. Folks drive hours and leave with a whole pie in the back seat — don't say we didn't warn you.</p>
+        <ul class="pielist">
+          <li>Banana Cream</li>
+          <li>Fresh Peach</li>
+          <li>Apple</li>
+          <li>Strawberry &amp; Rhubarb</li>
+          <li>Peach Cobbler</li>
+          <li>Carrot Cake</li>
+          <li>Strawberry Shortcake</li>
+          <li>Ask what's fresh</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <img src="assets/pie.jpg" width="712" height="950" loading="lazy" decoding="async"
+             alt="An enormous slice of homemade cream pie topped with whipped cream, powdered sugar, and chocolate drizzle." />
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto" aria-label="Our house rule">
+    <div>
+      <p class="script">“We do not have WiFi.<br>Talk to each other…<br>pretend it's 1986!”</p>
+      <p>That's painted right on our wall. Come unplug, slow down, and eat like family did before phones got loud.</p>
+      <p class="credit">— Straight off the Front Porch dining-room wall</p>
+    </div>
+  </section>
+
+  <section class="band" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">A taste of what's cookin'</p>
+        <h2 id="menu-h">From the Menu</h2>
+      </div>
+      <div class="menu-board reveal">
+        <div class="menu-cols">
+          <div>
+            <h3 class="menu-cat">Mornings</h3>
+            <div class="mi"><span class="nm">The 2-2-2 <span class="ds">2 eggs · 2 bacon · 2 pancakes</span></span><span class="pr">$2.99</span></div>
+            <div class="mi"><span class="nm">Farmer's Breakfast Bowl <span class="ds">a porch favorite</span></span><span class="pr">$12.49</span></div>
+            <div class="mi"><span class="nm">Country Big Breakfast <span class="ds">eggs, meat, taters &amp; toast</span></span><span class="pr">mkt</span></div>
+
+            <h3 class="menu-cat">Starters</h3>
+            <div class="mi"><span class="nm">Boom Boom Shrimp <span class="ds">crispy, tossed in the good sauce</span></span><span class="pr">$10.00</span></div>
+            <div class="mi"><span class="nm">Fried Okra Basket <span class="ds">Southern &amp; golden</span></span><span class="pr">mkt</span></div>
+            <div class="mi"><span class="nm">Corn Nuggets</span><span class="pr">mkt</span></div>
+          </div>
+          <div>
+            <h3 class="menu-cat">Front Porch Favorites</h3>
+            <div class="mi"><span class="nm">Famous Fried Chicken <span class="ds">two sides + cornbread</span></span><span class="pr">mkt</span></div>
+            <div class="mi"><span class="nm">Southern-Style Pot Roast <span class="ds">slow-cooked, fall-apart tender</span></span><span class="pr">mkt</span></div>
+            <div class="mi"><span class="nm">Chicken &amp; Dumplings <span class="ds">the daily special folks talk about</span></span><span class="pr">mkt</span></div>
+            <div class="mi"><span class="nm">Homemade Soup of the Day</span><span class="pr">mkt</span></div>
+
+            <h3 class="menu-cat">Save Room — Pie &amp; Sweets</h3>
+            <div class="mi"><span class="nm">Homemade Pie <span class="ds">peach · banana cream · apple · more</span></span><span class="pr">by the slice or whole</span></div>
+            <div class="mi"><span class="nm">Peach Cobbler · Carrot Cake</span><span class="pr">ask</span></div>
+          </div>
+        </div>
+        <p class="menu-note">Full menu served fresh in-house — this is just a taste. Call (352) 489-4708 for today's specials.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band reviews" aria-labelledby="rev-h">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Word of mouth</p>
+        <h2 id="rev-h" class="rye" style="color:var(--blue-deep);font-size:clamp(2rem,6vw,3.4rem)">4.4★ from 3,400+ folks</h2>
+      </div>
+      <div class="rev-grid">
+        <figure class="rev reveal">
+          <span class="pin" aria-hidden="true"></span>
+          <div class="qstars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote><p>“The food tasted like it was made with such love. I had the chicken &amp; dumpling special… we were so full we took a banana cream pie home and oh my — tasted so good. Will definitely go back.”</p></blockquote>
+          <figcaption class="who">Jackie <span>Google review</span></figcaption>
+        </figure>
+        <figure class="rev reveal">
+          <span class="pin" aria-hidden="true"></span>
+          <div class="qstars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote><p>“Quaint, locally owned and welcoming. The Southern pot roast is one of the best I've had. The peach pie was packed with real chunky slices of sweet juicy peaches. Now one of our favorite places.”</p></blockquote>
+          <figcaption class="who">Angela F. <span>Google review</span></figcaption>
+        </figure>
+        <figure class="rev reveal">
+          <span class="pin" aria-hidden="true"></span>
+          <div class="qstars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote><p>“All servers wonderful. Chef Mike came out and explained the search for real veggies — which is why the tomatoes were as good as my Papa's 50 years ago. Three generations of a loving family run this place.”</p></blockquote>
+          <figcaption class="who">Joseph B. <span>Google review</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band plank" id="visit" aria-labelledby="visit-h">
+    <div class="wrap visit-grid">
+      <div class="reveal">
+        <p class="eyebrow">Come on by</p>
+        <h2 id="visit-h">Find the Front Porch</h2>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true">▾</span>
+          <div><strong>Address</strong><br>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Front+Porch+Restaurant+12039+N+Florida+Ave+Dunnellon+FL+34434" target="_blank" rel="noopener">12039 N Florida Ave, Dunnellon, FL 34434 ↗</a></div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true">☎</span>
+          <div><strong>Phone</strong><br><a href="tel:+13524894708">(352) 489-4708</a></div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true">$</span>
+          <div><strong>Good to know</strong><br>Price $10–20 · Dine-in · Takeout · Catering · Cash &amp; cards</div>
+        </div>
+        <ul class="feat">
+          <li>Outdoor seating</li><li>Live music</li><li>Kids' menu</li><li>Great coffee</li>
+          <li>Great dessert</li><li>Group friendly</li><li>Counter service</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-barn" href="tel:+13524894708">Call to Order</a>
+          <a class="btn btn-blue" href="https://www.google.com/maps/search/?api=1&amp;query=Front+Porch+Restaurant+12039+N+Florida+Ave+Dunnellon+FL+34434" target="_blank" rel="noopener">Directions ↗</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <table class="hours">
+          <caption class="rye">Hours</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td class="closed">Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>7:00 AM – 8:30 PM</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>7:00 AM – 8:30 PM</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>7:00 AM – 8:30 PM</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>7:00 AM – 8:30 PM</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>7:00 AM – 8:30 PM</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>7:00 AM – 8:00 PM</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:1rem;color:var(--ink-soft);font-size:.95rem">Kitchen runs all day — breakfast, lunch &amp; dinner. Closed Mondays so the family gets a porch day too.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="sign rye">Front Porch</span>
+    <p class="nap">
+      Front Porch Restaurant &amp; Pie Shop<br>
+      12039 N Florida Ave, Dunnellon, FL 34434<br>
+      <a href="tel:+13524894708">(352) 489-4708</a> · Tue–Sun · Closed Monday
+    </p>
+    <p class="demo">
+      This is a concept website preview designed and built by <strong>Palmetto&nbsp;AI&nbsp;Automation</strong> for Front Porch Restaurant &amp; Pie Shop. Photos &amp; reviews sourced from the restaurant's public Google listing. Not an official site — hours, prices &amp; menu should be confirmed with the restaurant.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // --- Open / closed status (America/New_York) ---
+  try{
+    var now = new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+    var day = now.getDay(); // 0 Sun .. 6 Sat
+    var mins = now.getHours()*60 + now.getMinutes();
+    var sched = {1:null,2:[420,1230],3:[420,1230],4:[420,1230],5:[420,1230],6:[420,1230],0:[420,1200]};
+    var t = sched[day];
+    var dot = document.getElementById('statusDot');
+    var txt = document.getElementById('statusText');
+    if(t && mins>=t[0] && mins<t[1]){
+      var ch = t[1]===1230?'8:30 PM':'8:00 PM';
+      txt.textContent = 'Open now · until ' + ch;
+    } else {
+      dot.classList.add('shut');
+      txt.textContent = (day===1) ? 'Closed Mondays · open Tue 7:00 AM' : 'Closed now · opens 7:00 AM';
+    }
+    var row = document.querySelector('.hours tr[data-day="'+day+'"]');
+    if(row) row.classList.add('today');
+  }catch(e){}
+
+  // --- Scroll reveal ---
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(en,i){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.12});
+    els.forEach(function(el,i){ el.style.transitionDelay = (i%3*70)+'ms'; io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+})();
+</script>
+</body>
+</html>

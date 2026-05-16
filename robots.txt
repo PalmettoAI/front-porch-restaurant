@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://palmettoai.github.io/front-porch-restaurant/sitemap.xml
