@@ -14,7 +14,7 @@ import json, re, pathlib
 BASE = "https://palmettoai.github.io/front-porch-restaurant/"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = ROOT / "_build" / "pages"
-VER = "5"  # bump to bust CSS/JS cache after edits
+VER = "6"  # bump to bust CSS/JS cache after edits
 
 NAV = [("index.html", "Home"), ("pies.html", "Pie Shop"), ("breakfast.html", "Breakfast"), ("menu.html", "Menu")]
 
