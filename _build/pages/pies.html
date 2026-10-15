@@ -1,0 +1,172 @@
+<!---
+{
+ "path": "pies.html",
+ "crumb": "Pie Shop",
+ "title": "Order Homemade Pies for Pickup | Front Porch Pie Shop, Dunnellon FL",
+ "og_title": "Order Homemade Pies — Front Porch Pie Shop, Dunnellon",
+ "description": "Whole homemade pies $24, baked fresh every morning in Dunnellon, FL. 14 flavors: Key lime, pecan, apple, lemon meringue and more. Order a day ahead, pick up after 11 AM.",
+ "og": "pies.jpg",
+ "preload": "assets/img/pie-baker.webp",
+ "priority": "0.9",
+ "schema": [
+  {"@type": "Menu", "name": "Pie & Dessert Menu", "url": "https://palmettoai.github.io/front-porch-restaurant/pies.html",
+   "hasMenuSection": [
+    {"@type": "MenuSection", "name": "Whole Pies", "description": "Order a day ahead for local pickup after 11 AM.",
+     "hasMenuItem": [
+      {"@type": "MenuItem", "name": "Whole Pie (any flavor)", "offers": {"@type": "Offer", "price": "24.00", "priceCurrency": "USD"}},
+      {"@type": "MenuItem", "name": "Slice of Pie", "offers": {"@type": "Offer", "price": "6.49", "priceCurrency": "USD"}},
+      {"@type": "MenuItem", "name": "Mini Pie", "offers": {"@type": "Offer", "price": "8.00", "priceCurrency": "USD"}},
+      {"@type": "MenuItem", "name": "Whole Carrot Cake, Chocolate Cake or Cherry Bo Pie", "offers": {"@type": "Offer", "price": "45.00", "priceCurrency": "USD"}}
+     ]}
+   ]},
+  {"@type": "FAQPage", "mainEntity": [
+   {"@type": "Question", "name": "How much notice do you need for a whole pie?", "acceptedAnswer": {"@type": "Answer", "text": "Please give us a day's notice. We bake every morning and pies are out of the oven by 11:00 AM, so you can pick up your pie any day we're open from 11 AM on."}},
+   {"@type": "Question", "name": "Do you ship or deliver pies?", "acceptedAnswer": {"@type": "Answer", "text": "Not right now. Pies are for local pickup only at 12039 N Florida Ave in Dunnellon, FL."}},
+   {"@type": "Question", "name": "How much is a whole pie?", "acceptedAnswer": {"@type": "Answer", "text": "Whole pies are $24 for any of our 14 regular flavors. Carrot cake, chocolate cake and Cherry Bo pie are $45 whole when available. Mini pies are $8 ($10 for pecan and Cherry Bo). Prices are cash prices and may change."}},
+   {"@type": "Question", "name": "Can I pick up a pie on Monday?", "acceptedAnswer": {"@type": "Answer", "text": "We're closed on Mondays. Pickups are Tuesday through Sunday after 11 AM."}},
+   {"@type": "Question", "name": "Can I just stop in for a slice?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. Slices are $6.49, add a scoop of ice cream for $2. Whatever's in the case that day is yours for dine-in or to go."}}
+  ]}
+ ]
+}
+--->
+<main id="main">
+
+  <section class="pie-hero on-blue">
+    <div class="wrap ph-grid">
+      <div class="ph-copy">
+        <span class="eyebrow">The Front Porch Pie Shop</span>
+        <h1 class="h-display">Homemade pies, baked every morning.</h1>
+        <p class="lede">Order a whole pie a day ahead and it’ll be waiting for you at the counter. Fourteen flavors, $24 each. Local pickup in Dunnellon.</p>
+        <div class="hero-cta">
+          <a class="btn btn-pie" href="#order">{{PIE_ICON}}Order a Pie</a>
+          <a class="btn btn-ghost" href="#flavors">See the flavors</a>
+        </div>
+      </div>
+      <div class="ph-art">
+        <div class="photo"><img src="assets/img/pie-baker.webp" width="825" height="1100" alt="A Front Porch baker carrying a tray of towering meringue pies" fetchpriority="high" /></div>
+        <p class="stamp" aria-hidden="true"><span>Life’s short</span><b>Eat pie first!</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section class="section order" id="order" aria-labelledby="order-h">
+    <div class="wrap">
+      <div class="order-card reveal">
+        <div class="order-main">
+          <span class="eyebrow">Order for pickup</span>
+          <h2 id="order-h" class="h-section">Reserve your pie</h2>
+          <p class="order-date">Order today and pick up as early as<br /><strong data-pickup>tomorrow</strong> <span>after 11 AM</span></p>
+
+          <a class="btn btn-pie btn-xl" href="tel:+13524894708" data-order data-online-label="Order Pies Online" data-phone-label="Call to Order · (352) 489-4708">{{PIE_ICON}}<span data-order-label>Call to Order · (352) 489-4708</span></a>
+          <p class="fine" data-if-phone>Online ordering is coming soon. For now, just give us a call and tell us your flavor and pickup day.</p>
+          <p class="fine" data-if-online hidden>Pick your pie, choose your pickup time, and pay online. Your order goes straight to our kitchen.</p>
+        </div>
+        <ol class="steps">
+          <li><b>Pick your pie.</b> Any of the 14 flavors below, $24 whole.</li>
+          <li><b>Give us a day’s notice.</b> We bake every morning, so order at least one day ahead.</li>
+          <li><b>Pick up after 11 AM.</b> Come to the counter at 12039 N Florida Ave, Tuesday through Sunday.</li>
+        </ol>
+      </div>
+      <p class="pickup-note"><b>Local pickup only.</b> No shipping or delivery right now. We’re closed Mondays.</p>
+    </div>
+  </section>
+
+  <!-- FLAVORS -->
+  <section class="section flavors" id="flavors" aria-labelledby="flav-h">
+    <div class="wrap">
+      <div class="flav-head">
+        <span class="eyebrow">The pie case</span>
+        <h2 id="flav-h" class="h-section">Fourteen flavors, every one from scratch</h2>
+        <p class="price-strip"><span><b>$24</b> whole pie</span><span><b>$6.49</b> slice</span><span><b>+$2</b> à la mode</span></p>
+      </div>
+
+      <div class="cols-2">
+        <div class="menu-box reveal">
+          <h3 class="box-title">Fruit &amp; Nut</h3>
+          <ul class="pie-list">
+            <li style="--fill:#C98A3D;--top:#E8B86A"><i aria-hidden="true"></i>Apple</li>
+            <li style="--fill:#8A4E22;--top:#C98A3D"><i aria-hidden="true"></i>Apple Caramel Walnut</li>
+            <li style="--fill:#3C3F86;--top:#6B6FBF"><i aria-hidden="true"></i>Blueberry</li>
+            <li style="--fill:#9E1B23;--top:#D8434B"><i aria-hidden="true"></i>Cherry</li>
+            <li style="--fill:#5A3A22;--top:#9B6A3C"><i aria-hidden="true"></i>Pecan</li>
+            <li style="--fill:#C4304A;--top:#8FB45A"><i aria-hidden="true"></i>Strawberry Rhubarb</li>
+            <li style="--fill:#E89A4A;--top:#F6C27B"><i aria-hidden="true"></i>Peach</li>
+          </ul>
+        </div>
+        <div class="menu-box reveal">
+          <h3 class="box-title">Cream &amp; Meringue</h3>
+          <ul class="pie-list">
+            <li style="--fill:#E9E59B;--top:#FFFFFF"><i aria-hidden="true"></i>Key Lime</li>
+            <li style="--fill:#5B3A27;--top:#C79A62"><i aria-hidden="true"></i>Chocolate Peanut Butter</li>
+            <li style="--fill:#F2DE8A;--top:#FFF7E4" class="mer"><i aria-hidden="true"></i>Banana Meringue</li>
+            <li style="--fill:#4A2E22;--top:#FFF7E4" class="mer"><i aria-hidden="true"></i>Chocolate Meringue</li>
+            <li style="--fill:#6B4A33;--top:#FFF7E4" class="mer"><i aria-hidden="true"></i>Chocolate Coconut Meringue</li>
+            <li style="--fill:#F5EFD8;--top:#FFF7E4" class="mer"><i aria-hidden="true"></i>Coconut Meringue</li>
+            <li style="--fill:#F6DA4C;--top:#FFF7E4" class="mer"><i aria-hidden="true"></i>Lemon Meringue</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cols-2 specials">
+        <div class="menu-box reveal">
+          <h3 class="box-title">When Available</h3>
+          <ul class="items">
+            <li class="item"><span class="name">Carrot Cake</span><span class="price">6.99 / 45</span></li>
+            <li class="item"><span class="name">Chocolate Cake</span><span class="price">6.99 / 45</span></li>
+            <li class="item"><span class="name">Cherry Bo Pie</span><span class="price">6.99 / 45</span></li>
+          </ul>
+          <p class="fine box-foot">Slice / whole. Call to check today’s availability.</p>
+        </div>
+        <div class="menu-box reveal">
+          <h3 class="box-title">Mini Pies</h3>
+          <ul class="items">
+            <li class="item"><span class="name">Banana, Coconut, Chocolate or Lemon Meringue</span><span class="price">8</span></li>
+            <li class="item"><span class="name">Pumpkin</span><span class="price">8</span></li>
+            <li class="item"><span class="name">Pecan</span><span class="price">10</span></li>
+            <li class="item"><span class="name">Cherry Bo</span><span class="price">10</span></li>
+          </ul>
+          <p class="fine box-foot">Ask about our seasonal pies, too.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOLIDAY -->
+  <section class="holiday" aria-labelledby="hol-h">
+    <div class="wrap hol-grid reveal">
+      <p class="hol-script script" aria-hidden="true">Holidays</p>
+      <div>
+        <h2 id="hol-h" class="slab">Feeding a crowd this Thanksgiving or Christmas?</h2>
+        <p>Reserve your holiday pies early. The more notice you give us, the easier it is to bake exactly what your table needs. Pumpkin, pecan and apple are the classics.</p>
+      </div>
+      <a class="btn btn-blue" href="tel:+13524894708" data-order data-online-label="Reserve Online" data-phone-label="Call to Reserve"><span data-order-label>Call to Reserve</span></a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery" aria-labelledby="gal-h">
+    <div class="wrap">
+      <h2 id="gal-h" class="h-section">Fresh out of the oven</h2>
+      <div class="pie-gallery">
+        <figure class="polaroid g1 reveal"><img src="assets/img/pie-meringue.webp" width="1069" height="1100" alt="Towering meringue pie with chocolate drizzle" loading="lazy" /><figcaption>sky-high meringue</figcaption></figure>
+        <figure class="polaroid g2 reveal"><img src="assets/img/pie-apple.webp" width="750" height="1000" alt="A slice of double-crust fruit pie" loading="lazy" /><figcaption>double crust</figcaption></figure>
+        <figure class="polaroid g3 reveal"><img src="assets/img/pie-pecan.webp" width="640" height="640" alt="A slice of pecan pie" loading="lazy" /><figcaption>pecan</figcaption></figure>
+        <figure class="polaroid g4 reveal"><img src="assets/img/pie-carrot.webp" width="640" height="640" alt="Pecan pie and a slice of carrot cake" loading="lazy" /><figcaption>carrot cake, too</figcaption></figure>
+        <figure class="polaroid g5 reveal"><img src="assets/img/pie.webp" width="712" height="950" alt="A slice of cream pie drizzled with chocolate" loading="lazy" /><figcaption>a slice for the road</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" aria-labelledby="faq-h">
+    <div class="wrap faq-wrap">
+      <h2 id="faq-h" class="h-section">Pie questions</h2>
+      <details open><summary>How much notice do you need for a whole pie?</summary><p>Please give us a day’s notice. We bake every morning and pies are out of the oven by 11:00 AM, so you can pick up any day we’re open from 11 AM on.</p></details>
+      <details><summary>Do you ship or deliver pies?</summary><p>Not right now. Pies are for local pickup only at 12039 N Florida Ave in Dunnellon.</p></details>
+      <details><summary>How much is a whole pie?</summary><p>$24 for any of our 14 regular flavors. Carrot cake, chocolate cake and Cherry Bo pie are $45 whole when available. Mini pies are $8 ($10 for pecan and Cherry Bo). Menu prices are cash prices and may change.</p></details>
+      <details><summary>Can I pick up on a Monday?</summary><p>We’re closed Mondays. Pickups are Tuesday through Sunday, after 11 AM.</p></details>
+      <details><summary>Can I just stop in for a slice?</summary><p>Absolutely. Slices are $6.49, add a scoop of ice cream for $2. Whatever’s in the case that day is yours, dine-in or to go.</p></details>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:wght@700;800&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+*{margin:0;box-sizing:border-box}
+body{width:1200px;height:630px;background:#F4ECD9;font-family:Bitter,serif;display:grid;grid-template-columns:690px 510px;overflow:hidden}
+.l{padding:56px 40px 48px 64px;display:flex;flex-direction:column;justify-content:center;border-right:0}
+.s{font-family:Yellowtail;color:#B3261E;font-size:46px;transform:rotate(-2deg);transform-origin:left;line-height:1}
+h1{font-family:'Alfa Slab One';text-transform:uppercase;color:#1F4E9C;font-size:70px;line-height:.98;margin:14px 0 18px}
+.p{font-size:27px;font-weight:700;color:#1F2433;line-height:1.3}
+.b{margin-top:26px;display:flex;gap:14px;align-items:center;font-family:'Alfa Slab One';text-transform:uppercase;font-size:20px;color:#1F4E9C;border-top:3px dashed #1F4E9C;padding-top:18px}
+.r{position:relative;background:#1F4E9C;padding:34px}
+.r img{width:100%;height:100%;object-fit:cover;border:8px solid #F7F0DC;transform:rotate(2deg);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.tag{position:absolute;left:-34px;bottom:40px;background:#B3261E;color:#fff;font-family:'Alfa Slab One';font-size:30px;padding:12px 22px;border-radius:999px;transform:rotate(-6deg);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+</style></head><body>
+<div class="l"><div class="s" id="s"></div><h1 id="h"></h1><div class="p" id="p"></div><div class="b">Front Porch Restaurant &amp; Pie Shop · Dunnellon, FL</div></div>
+<div class="r"><img id="i"><div class="tag" id="t"></div></div>
+<script>
+const q=new URLSearchParams(location.search);
+for (const k of ['s','h','p','t']) document.getElementById(k).innerHTML=q.get(k)||'';
+document.getElementById('i').src='../assets/img/'+q.get('i');
+if(!q.get('t')) document.getElementById('t').remove();
+</script></body></html>
