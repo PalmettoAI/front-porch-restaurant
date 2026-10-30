@@ -10,11 +10,13 @@ The plan behind all of this is in `_seo/SEO-PLAN.md`.
 
 ### 1.1 Model
 - Run Addie behind an **OpenAI-compatible endpoint** (Ollama `http://localhost:11434/v1`, or LM Studio / MLX server). The scripts read `ADDIE_URL` and `ADDIE_MODEL` from `~/.config/frontporch/env`, so any job can be pointed at a different model with one line.
-- Model size: a **~30B instruct model at Q4 (e.g. Qwen3-32B)** if the Studio has 64 GB+ unified memory, or ~14B on 32 GB. Check `system_profiler SPHardwareDataType` before choosing. Don't assume a 70B model fits.
+- Machine (verified 2026-10-30): Addys-Mac-Studio, Apple M3 Ultra, 96 GB, user `addy`, Ollama at `localhost:11434`. Installed: `qwen2.5:72b`, `llama3.3:70b`, `mistral-small3.1:24b`, `qwen3:8b`, `llama3.1:8b`.
+- Use **`qwen2.5:72b`** for pages, posts and replies (best at following the format and rules), with `llama3.3:70b` as the fallback. Use `qwen3:8b` only for quick classification steps, never for customer-facing text. A 72B Q4 model uses ~45 GB, so leave the Studio's other work room and run tasks one at a time.
+- Keep all of our files in `~/addie/` on the Studio. It's someone's personal machine, so don't touch anything else.
 - Temperature 0.4 for posts and pages, 0.1 for the report and for title/description proposals.
 
 ### 1.2 Machine
-- Never sleep (`sudo pmset -a sleep 0 disksleep 0`). Ethernet, UPS, auto-login, Tailscale for remote access.
+- Already done 2026-10-30: sleep=0, auto-restart, auto-login, Tailscale (Prozak's tailnet; reach it from Deniz's Mac with `ssh studio`). Still to do: UPS and ethernet if it isn't wired.
 - Daily health ping: a launchd job that curls a dead-man's-switch URL (e.g. healthchecks.io) so we know if the Studio goes down.
 
 ### 1.3 Repo and secrets
@@ -44,13 +46,13 @@ chmod 600 both files. **The repo is public. No secret ever goes in `_seo/`.**
   <key>Label</key><string>com.paa.frontporch.weekly</string>
   <key>ProgramArguments</key><array>
     <string>/usr/bin/python3</string>
-    <string>/Users/REPLACE_ME/addie/front-porch-restaurant/_seo/bin/run_week.py</string>
+    <string>/Users/addy/addie/front-porch-restaurant/_seo/bin/run_week.py</string>
   </array>
   <key>StartCalendarInterval</key><dict>
     <key>Weekday</key><integer>1</integer><key>Hour</key><integer>6</integer><key>Minute</key><integer>0</integer>
   </dict>
-  <key>StandardOutPath</key><string>/Users/REPLACE_ME/addie/logs/frontporch.out.log</string>
-  <key>StandardErrorPath</key><string>/Users/REPLACE_ME/addie/logs/frontporch.err.log</string>
+  <key>StandardOutPath</key><string>/Users/addy/addie/logs/frontporch.out.log</string>
+  <key>StandardErrorPath</key><string>/Users/addy/addie/logs/frontporch.err.log</string>
 </dict></plist>
 ```
 Load it with `launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.paa.frontporch.weekly.plist`. launchd runs a missed job at the next wake, but only if the Mac was asleep, not off.
