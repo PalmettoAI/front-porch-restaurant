@@ -135,7 +135,8 @@ Write gbp-posts.md with 2 Google Business Profile posts:
 POST 1 - BREAKFAST: 60-120 words. One specific breakfast item from facts.json, the breakfast hours,
   "Dunnellon", end with the phone number. Suggest a button: CALL.
 POST 2 - PIE: 60-120 words. One specific flavor, the $24 whole-pie price, the one-day-notice rule,
-  local pickup, "Dunnellon", end with the phone number. Suggest a button: CALL or ORDER (link pies.html).
+  local pickup, "Dunnellon". If facts.json has online_ordering_url: end with "Order online" and suggest
+  button ORDER ONLINE (link online_ordering_url). Otherwise end with the phone number, button CALL.
 For each post also give: PHOTO: <which kind of photo to use, e.g. "whole meringue pie">, TOPIC: <3 words>.
 
 Then write facebook.md: one Facebook post, 40-90 words, reusing the stronger of the two angles.

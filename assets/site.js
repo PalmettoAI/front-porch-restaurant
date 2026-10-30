@@ -1,10 +1,11 @@
 /* Front Porch — shared behavior.
  *
- * ONLINE ORDERING: when the SkyTab (Shift4) online-ordering link is ready,
- * paste it into ORDER_URL below. Every "Order Pies" button on the site
- * switches from "call to order" to the online link automatically.
+ * ONLINE ORDERING: paste the pie-order app's URL (PalmettoAI/front-porch-pie-orders,
+ * on Railway) into ORDER_URL below. Every "Order Pies" button on the site
+ * switches from "call to order" to the online order page automatically.
+ * (SkyTab was the first plan; it only holds orders ~6 days out, so we built our own.)
  */
-var ORDER_URL = "";            // e.g. "https://order.skytab.com/..." (from the POS team)
+var ORDER_URL = "";            // e.g. "https://<pie-orders app>/" — leave empty until the restaurant is ready
 var PHONE = "+13524894708";
 var PHONE_PRETTY = "(352) 489-4708";
 
@@ -17,8 +18,6 @@ var PHONE_PRETTY = "(352) 489-4708";
     var label = a.querySelector("[data-order-label]");
     if (ORDER_URL) {
       a.href = ORDER_URL;
-      a.target = "_blank";
-      a.rel = "noopener";
       if (label && a.dataset.onlineLabel) label.textContent = a.dataset.onlineLabel;
     } else {
       a.href = "tel:" + PHONE;

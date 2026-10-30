@@ -1,7 +1,6 @@
 {
   "_readme": "The ONLY source of facts Addie may use. If a number, time, price, flavor or claim is not in this file, it does not go in a draft. Humans update this file; Addie never edits it. Fields marked null are unknown: ask Michael, never guess.",
   "updated": "2026-10-30",
-
   "business": {
     "name": "Front Porch Restaurant & Pie Shop",
     "owner": "Michael Gray",
@@ -13,11 +12,22 @@
     "website": "https://palmettoai.github.io/front-porch-restaurant/",
     "website_note": "Will change when the real domain is bought. Use the value in this field, never a remembered one.",
     "facebook": "https://www.facebook.com/p/The-Front-Porch-Restaurant-Pie-Shop-100044299162284/",
-    "google_rating": {"value": 4.4, "count": 3378, "as_of": "2026-10-15", "note": "Say '3,300+ Google reviews', never an exact count."},
-    "cuisine": ["Southern home cooking", "country breakfast", "homemade pies"],
-    "house_lines": ["Life's short... eat pie first", "We do not have WiFi. Talk to each other. Pretend it's 1986."]
+    "google_rating": {
+      "value": 4.4,
+      "count": 3378,
+      "as_of": "2026-10-15",
+      "note": "Say '3,300+ Google reviews', never an exact count."
+    },
+    "cuisine": [
+      "Southern home cooking",
+      "country breakfast",
+      "homemade pies"
+    ],
+    "house_lines": [
+      "Life's short... eat pie first",
+      "We do not have WiFi. Talk to each other. Pretend it's 1986."
+    ]
   },
-
   "hours": {
     "monday": "closed",
     "tuesday_to_saturday": "7:00 AM - 8:30 PM",
@@ -26,35 +36,76 @@
     "breakfast_weekends": "7:00 - 11:30 AM (Sat-Sun)",
     "holiday_hours": null
   },
-
   "pies": {
-    "whole": 24.00,
+    "whole": 24.0,
     "slice": 6.49,
-    "a_la_mode_addon": 2.00,
-    "mini": 8.00,
-    "mini_pecan_or_cherry_bo": 10.00,
-    "specialty_whole": 45.00,
+    "a_la_mode_addon": 2.0,
+    "mini": 8.0,
+    "mini_pecan_or_cherry_bo": 10.0,
+    "specialty_whole": 45.0,
     "specialty_slice": 6.99,
-    "specialty_items": ["Carrot Cake", "Chocolate Cake", "Cherry Bo Pie"],
+    "specialty_items": [
+      "Carrot Cake",
+      "Chocolate Cake",
+      "Cherry Bo Pie"
+    ],
     "specialty_note": "When available. Call to check.",
     "regular_flavors": {
-      "fruit_and_nut": ["Apple", "Apple Caramel Walnut", "Blueberry", "Cherry", "Pecan", "Strawberry Rhubarb", "Peach"],
-      "cream_and_meringue": ["Key Lime", "Chocolate Peanut Butter", "Banana Meringue", "Chocolate Meringue", "Chocolate Coconut Meringue", "Coconut Meringue", "Lemon Meringue"]
+      "fruit_and_nut": [
+        "Apple",
+        "Apple Caramel Walnut",
+        "Blueberry",
+        "Cherry",
+        "Pecan",
+        "Strawberry Rhubarb",
+        "Peach"
+      ],
+      "cream_and_meringue": [
+        "Key Lime",
+        "Chocolate Peanut Butter",
+        "Banana Meringue",
+        "Chocolate Meringue",
+        "Chocolate Coconut Meringue",
+        "Coconut Meringue",
+        "Lemon Meringue"
+      ]
     },
-    "mini_flavors": ["Banana Meringue", "Coconut Meringue", "Chocolate Meringue", "Lemon Meringue", "Pumpkin", "Pecan", "Cherry Bo"],
-    "order_rules": ["Order whole pies one day ahead", "Out of the oven by 11 AM", "Local pickup only (no shipping, no delivery)", "Closed Mondays"],
-    "how_to_order": "Call (352) 489-4708. Online ordering through SkyTab is coming; do not mention it as live until online_ordering_url is set.",
+    "mini_flavors": [
+      "Banana Meringue",
+      "Coconut Meringue",
+      "Chocolate Meringue",
+      "Lemon Meringue",
+      "Pumpkin",
+      "Pecan",
+      "Cherry Bo"
+    ],
+    "order_rules": [
+      "Order whole pies one day ahead",
+      "Out of the oven by 11 AM",
+      "Local pickup only (no shipping, no delivery)",
+      "Closed Mondays"
+    ],
+    "how_to_order": "Call (352) 489-4708. Online ordering (PAA's own order app, pay at pickup, up to 90 days ahead) is built but not live; mention it only once online_ordering_url is set.",
     "online_ordering_url": null,
     "prices_note": "Menu prices are cash prices and may change.",
-    "signature": "Meringue piled sky-high"
+    "signature": "Meringue piled sky-high",
+    "online_ordering": {
+      "payment": "Pay at pickup (cash or card at the counter)",
+      "order_ahead": "From the next day up to 90 days ahead",
+      "daily_limit_note": "Days can fill up; the order page shows how many pies are left"
+    }
   },
-
   "breakfast_sample": {
     "two_eggs_toast_grits": 7.49,
-    "items": ["Biscuits and gravy", "Country fried steak and eggs", "Pancakes", "Omelettes"]
+    "items": [
+      "Biscuits and gravy",
+      "Country fried steak and eggs",
+      "Pancakes",
+      "Omelettes"
+    ]
   },
-
   "unknown_ask_michael": [
+    "Online pie orders: where should alerts go (text/email), daily whole-pie limit (default 40), is whole pumpkin pie available, who logs in to the admin page",
     "Thanksgiving 2026: pie order deadline, pickup days, open on Thanksgiving Day?",
     "Christmas 2026: same questions",
     "Holiday hours",
@@ -63,7 +114,6 @@
     "Any live music schedule",
     "Owner and staff photos we are allowed to use (only current staff)"
   ],
-
   "never_say": [
     "Any staff member's name (staff changes; photos and names of former staff must not appear)",
     "Shipping, delivery, or nationwide",

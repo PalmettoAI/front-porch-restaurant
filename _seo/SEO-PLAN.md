@@ -8,12 +8,30 @@
 
 When someone near Dunnellon searches for breakfast, a pie or a place to eat, Front Porch shows up and they call or come in.
 
-Michael's priorities, in order:
-1. **More breakfast customers.** He said, "we are lacking in our breakfast category."
-2. **More whole-pie orders.** Pies are local pickup with one day's notice.
+Michael's priorities:
+1. **Sell pies online.** This is the core of the project. Whole pies, **local pickup only for now**, ordered days or weeks ahead. Pie SEO exists to send people to the order page.
+2. **More breakfast customers.** He said, "we are lacking in our breakfast category."
 3. Keep the lunch and supper regulars.
 
-For a restaurant, success is measured in **calls, direction requests and pie orders**, not blog traffic. Google Business Profile (GBP) does most of the work for a restaurant. The website backs GBP up and wins the pie and holiday searches.
+For a restaurant, success is measured in **online pie orders, calls and direction requests**, not blog traffic. Google Business Profile (GBP) does most of the restaurant work. The website wins the pie and holiday searches and turns them into orders.
+
+## Online pie ordering (built 2026-10-30)
+
+SkyTab only holds orders about 6 days out, and holiday pie orders come in weeks ahead, so PAA built its own order system: `PalmettoAI/front-porch-pie-orders` (local `~/front-porch-pie-orders`), hosted on Railway.
+- **Customers:** pick pies and quantities, choose a pickup day up to 90 days out and a time after 11 AM, and **pay at pickup**. The order page enforces one day's notice, closed Mondays and a daily whole-pie limit.
+- **Restaurant:** the `/admin` page has a printable bake list per day (totals by flavor), order statuses (new, confirmed, picked up, cancelled), blocked days, which pies are offered, prices and limits.
+- **Go-live switch:** paste the app's URL into `ORDER_URL` in `assets/site.js`. Every Order button on the site then points to the order page, and the pies page text changes to "pay when you pick up."
+- **Before go-live:** Michael (1) gets the admin login, (2) picks where order alerts go (text, email or both), (3) confirms the daily pie limit (default 40), the pumpkin pie and the holiday rules. Until then the site stays on "Call to order", so nobody can place an order nobody sees.
+- **Later:** online card payment (Stripe or Square in Michael's name) and shipping/delivery are out of scope until he asks.
+
+### Pie SEO: every pie search should end on the order page
+- **pies.html is the money page.** Main search: "order pies online Dunnellon" / "pie shop Dunnellon". Its main CTA is "Order Pies Online" → order app. Add a visible "How ordering works" section (3 steps) with matching FAQ: "Can I order a pie online?", "How far ahead can I order?", "Do you ship pies?" (No, local pickup only.)
+- **GBP:** set the **Order online / Order ahead link** to the order page with a UTM tag (`?utm_source=google&utm_medium=gbp&utm_campaign=pies`). Add each pie to the GBP **Products** section (photo, $24, "Order online" button → order page). This is the biggest pie lever: it shows inside Maps.
+- **Schema:** once live, add `potentialAction: {"@type": "OrderAction", "target": "<order URL>", "deliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModePickUp"}` to the Restaurant node, and keep the `Menu` / `MenuItem` + `Offer` prices on pies.html in sync with the order app's menu.
+- **Signature pie pages** (one page each, not 15 thin flavor pages): **mile-high meringue pies**, **Key lime pie**, **pecan pie**. Each one ≥ 600 words with real photos, answering "where to get a Key lime pie near Dunnellon/Ocala", linking to the order page with that flavor's name in the button.
+- **Holiday pages are pie order pages:** thanksgiving-pies.html and christmas-pies.html lead with "Order online for pickup" and the last order date (from Michael), and link straight to the order page.
+- **The order page itself** (the Railway app) is indexable, with its own title and description. Once the domain exists, give it a subdomain (`order.<domain>`) through Cloudflare so it carries the brand.
+- **Measure:** online pie orders per week (from /admin), GA4 `order_click` on the site, GBP order-link clicks.
 
 ## Target searches
 
@@ -23,7 +41,10 @@ Don't promise rankings. These are the searches we're aiming at. Once Search Cons
 |---|---|---|
 | Home | restaurants in Dunnellon FL, Southern food Dunnellon | Front Porch Dunnellon, family restaurant Dunnellon |
 | breakfast.html | breakfast Dunnellon FL, breakfast near me (Dunnellon) | biscuits and gravy Dunnellon, country breakfast near Rainbow Springs |
-| pies.html | pie shop Dunnellon, homemade pies near Ocala | whole pie order Dunnellon, meringue pie, Key lime pie Dunnellon |
+| pies.html | **order pies online Dunnellon**, pie shop Dunnellon, homemade pies near Ocala | whole pie order Dunnellon, pie pickup Dunnellon, meringue pie, Key lime pie Dunnellon |
+| (new) meringue-pies.html | meringue pie Dunnellon, mile high meringue pie | lemon / coconut / chocolate meringue pie near Ocala |
+| (new) key-lime-pie.html | Key lime pie Dunnellon, Key lime pie Ocala | whole Key lime pie order |
+| (new) pecan-pie.html | pecan pie Dunnellon, pecan pie order Ocala | Thanksgiving pecan pie |
 | menu.html | Front Porch menu, lunch Dunnellon | country fried steak Dunnellon, fried chicken Dunnellon |
 | (new) thanksgiving-pies.html | Thanksgiving pies Dunnellon, Thanksgiving pie order Ocala | pumpkin pie order, pecan pie order |
 | (new) christmas-pies.html | Christmas pies Dunnellon | holiday pie order Ocala |
@@ -79,13 +100,15 @@ Every draft goes through `validate_draft.py` before a human sees it. The script 
 
 ## Content queue (Task D works top to bottom; humans can reorder)
 
-1. `thanksgiving-pies.html`: order deadline, pickup days, the classics (pumpkin, pecan, apple), call to order. **Needs the H6 answers first. Do not draft it with guessed dates.**
-2. `rainbow-springs-breakfast.html`: "Breakfast before the Rainbow River." For tourists, with drive time and what's on the plate. (Plan the drive-time line now; check it in Google Maps before publishing.)
-3. `about.html`: since 1986, family owned, the no-WiFi chalkboard, Michael's own words if he gives us a quote.
-4. `christmas-pies.html`: live by 2026-12-01.
-5. Refresh `breakfast.html`: add the 3 most-asked breakfast questions as a visible FAQ (visible text must match the schema).
-6. Refresh `pies.html`: one section per signature pie (meringue, Key lime, pecan).
-7. Seasonal pie page once Michael names the seasonal flavors.
+1. `thanksgiving-pies.html`: order deadline, pickup days, the classics (pumpkin, pecan, apple), **Order online** button (call as backup). **Needs the H6 answers first. Do not draft it with guessed dates.**
+2. Refresh `pies.html` for online ordering: "How ordering works" section + ordering FAQ (see Pie SEO above). Do this the same day ordering goes live.
+3. `meringue-pies.html`: the signature mile-high meringue pies.
+4. `rainbow-springs-breakfast.html`: "Breakfast before the Rainbow River." For tourists, with drive time and what's on the plate. (Plan the drive-time line now; check it in Google Maps before publishing.)
+5. `about.html`: since 1986, family owned, the no-WiFi chalkboard, Michael's own words if he gives us a quote.
+6. `christmas-pies.html`: live by 2026-12-01, with an Order online button.
+7. `key-lime-pie.html` and `pecan-pie.html`.
+8. Refresh `breakfast.html`: add the 3 most-asked breakfast questions as a visible FAQ (visible text must match the schema).
+9. Seasonal pie page once Michael names the seasonal flavors.
 
 Every new page follows the playbook template: an H1 that matches the search → a 40–60 word answer paragraph → H2 sections → links to pies.html and breakfast.html → a visible FAQ (4–6 questions) → one call-to-order CTA. Each page also gets its own OG card, a sitemap entry and a `llms.txt` entry. No em dashes.
 
@@ -101,7 +124,7 @@ Record a baseline on cutover day, then track weekly:
 - GBP: calls, direction requests, website clicks (from the GBP Performance tab; a human pastes them into `_seo/inbox/gbp-metrics.txt` until API access exists)
 - GSC: clicks and average position for the target searches
 - GA4: `phone_click`, `order_click`, `directions_click`
-- Pie orders per week (ask Michael for a tally, especially Thanksgiving and Christmas)
+- **Online pie orders per week** and whole pies per pickup day (from the order app's /admin), plus phone orders Michael tallies, especially for Thanksgiving and Christmas
 
 ## Hosting and safety rules
 
